@@ -1,5 +1,5 @@
 {
-  "name": "merge-concat",
+  "name": "merge-and-concat",
   "version": "1.0.0",
   "description": "Merge objects and concatenating arrays inside them",
   "main": "index.es5.js",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamstarkov/merge-concat.git"
+    "url": "git+https://github.com/iamstarkov/merge-and-concat.git"
   },
   "keywords": [
     "merge",
@@ -30,9 +30,9 @@
   "author": "Vladimir Starkov <vladimir.starkov@nordnet.se> (https://iamstarkov.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iamstarkov/merge-concat/issues"
+    "url": "https://github.com/iamstarkov/merge-and-concat/issues"
   },
-  "homepage": "https://github.com/iamstarkov/merge-concat#readme",
+  "homepage": "https://github.com/iamstarkov/merge-and-concat#readme",
   "devDependencies": {
     "assert": "*",
     "babel": "*",

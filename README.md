@@ -1,4 +1,4 @@
-# merge-concat
+# merge-and-concat
 
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
@@ -9,14 +9,14 @@
 
 ## Install
 
-    npm install --save merge-concat
+    npm install --save merge-and-concat
 
 ## Usage
 
 ```js
-import mergeConcat from 'merge-concat';
+import mergeAndConcat from 'merge-and-concat';
 
-mergeConcat(
+mergeAndConcat(
   { hey: 'hey', list: [1, 2] },
   { ho: 'ho', list: [3, 4] },
   { uni: 'corns' }
@@ -25,7 +25,7 @@ mergeConcat(
 
 ## API
 
-### mergeConcat(...objects)
+### mergeAndConcat(...objects)
 
 #### objects
 
@@ -38,14 +38,14 @@ Set of objects
 
 MIT © [Vladimir Starkov](https://iamstarkov.com)
 
-[npm-url]: https://npmjs.org/package/merge-concat
-[npm-image]: https://img.shields.io/npm/v/merge-concat.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/merge-and-concat
+[npm-image]: https://img.shields.io/npm/v/merge-and-concat.svg?style=flat-square
 
-[travis-url]: https://travis-ci.org/iamstarkov/merge-concat
-[travis-image]: https://img.shields.io/travis/iamstarkov/merge-concat.svg?style=flat-square
+[travis-url]: https://travis-ci.org/iamstarkov/merge-and-concat
+[travis-image]: https://img.shields.io/travis/iamstarkov/merge-and-concat.svg?style=flat-square
 
-[coveralls-url]: https://coveralls.io/r/iamstarkov/merge-concat
-[coveralls-image]: https://img.shields.io/coveralls/iamstarkov/merge-concat.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/iamstarkov/merge-and-concat
+[coveralls-image]: https://img.shields.io/coveralls/iamstarkov/merge-and-concat.svg?style=flat-square
 
-[depstat-url]: https://david-dm.org/iamstarkov/merge-concat
-[depstat-image]: https://david-dm.org/iamstarkov/merge-concat.svg?style=flat-square
+[depstat-url]: https://david-dm.org/iamstarkov/merge-and-concat
+[depstat-image]: https://david-dm.org/iamstarkov/merge-and-concat.svg?style=flat-square
