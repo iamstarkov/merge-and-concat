@@ -16,28 +16,22 @@
 ```js
 import mergeConcat from 'merge-concat';
 
-mergeConcat('unicorns'); // unicorns
+mergeConcat(
+  { hey: 'hey', list: [1, 2] },
+  { ho: 'ho', list: [3, 4] },
+  { uni: 'corns' }
+); // { hey: 'hey', ho: 'ho', uni: 'corns', list: [1, 2, 3, 4] }
 ```
 
 ## API
 
-### mergeConcat(input, [options])
+### mergeConcat(...objects)
 
-#### input
+#### objects
 
-*Required*  
-Type: `String`
+Type: each item is `Object`
 
-Lorem ipsum.
-
-#### options
-
-##### foo
-
-Type: `Boolean`  
-Default: `false`
-
-Lorem ipsum.
+Set of objects
 
 ## License
 
