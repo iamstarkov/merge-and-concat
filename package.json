@@ -41,5 +41,8 @@
     "mocha": "*",
     "npm-run-all": "*",
     "trash": "*"
+  },
+  "dependencies": {
+    "lodash": "^3.10.1"
   }
 }
