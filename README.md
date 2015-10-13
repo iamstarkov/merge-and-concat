@@ -29,6 +29,7 @@ mergeConcat(
 
 #### objects
 
+*Required*  
 Type: each item is `Object`
 
 Set of objects

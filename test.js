@@ -9,6 +9,3 @@ it('should mergeConcat', () =>
     ),
     { hey: 'hey', ho: 'ho', uni: 'corns', list: [1, 2, 3, 4] }
   ));
-
-it('should mergeConcat with empty input', () =>
-  deepEqual(mergeConcat(), {}));
