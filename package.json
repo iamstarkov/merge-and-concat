@@ -1,6 +1,6 @@
 {
   "name": "merge-and-concat",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "Merge objects and concatenating arrays inside them",
   "main": "index.es5.js",
   "jsnext:main": "index.js",
