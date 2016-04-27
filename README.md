@@ -23,6 +23,7 @@ mergeAndConcat(
   { uni: 'corns' }
 ); // { hey: 'hey', ho: 'ho', uni: 'corns', list: [1, 2, 3, 4] }
 
+// removing dupes
 mergeAndConcat(
   { after_script: ['npm run coverage'] },
   { after_script: ['npm run coverage'] }

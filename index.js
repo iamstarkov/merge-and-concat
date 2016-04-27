@@ -1,15 +1,12 @@
-function mergeAndConcatAsync(input) {
-  if (typeof input !== 'string') {
-    return Promise.reject(new TypeError(`\input\` should be \`String\`, got \`${typeof input}\``));
+import _ from 'lodash';
+
+const mergeArrays = (a, b) => (_.isArray(a) ? _.uniq(a.concat(b)) : undefined);
+
+function mergeAndConcat(...objects) {
+  if (objects.length === 0) {
+    return {};
   }
-  return Promise.resolve(input);
+  return _.merge(...objects, mergeArrays);
 }
 
-function mergeAndConcat(input) {
-  if (typeof input !== 'string') {
-    throw new TypeError(`\input\` should be \`String\`, got \`${typeof input}\``);
-  }
-  return input;
-}
-
-export { mergeAndConcat, mergeAndConcatAsync };
+export default mergeAndConcat;

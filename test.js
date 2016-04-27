@@ -18,5 +18,7 @@ test('remove dupes', t => t.deepEqual(
   { after_script: ['npm run coverage'] }
 ));
 
-test('empty input', t => t.throws(() => { mergeAndConcat(); }, TypeError));
-test('invalid input', t => t.throws(() => { mergeAndConcat(2); }, TypeError));
+test('empty input', t => t.deepEqual(
+  mergeAndConcat(),
+  {}
+));
