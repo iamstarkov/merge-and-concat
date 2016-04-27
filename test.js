@@ -1,19 +1,15 @@
-import { deepEqual } from 'assert';
-import mergeAndConcat from './index';
+import test from 'ava';
+import { mergeAndConcat, mergeAndConcatAsync } from './index';
 
-it('should mergeAndConcat', () =>
-  deepEqual(mergeAndConcat(
-    { hey: 'hey', list: [1, 2] },
-    { ho: 'ho', list: [3, 4] },
-    { uni: 'corns' }
-  ),
-  { hey: 'hey', ho: 'ho', uni: 'corns', list: [1, 2, 3, 4] }
-));
+test('basic', t =>
+  t.is(mergeAndConcat('unicorns'), 'unicorns'));
 
-it('should remove dupes', () =>
-  deepEqual(mergeAndConcat(
-    { after_script: ['npm run coverage'] },
-    { after_script: ['npm run coverage'] }
-  ),
-  { after_script: ['npm run coverage'] }
-));
+test('empty input', t => t.throws(() => { mergeAndConcat(); }, TypeError));
+test('invalid input', t => t.throws(() => { mergeAndConcat(2); }, TypeError));
+
+test('async :: basic', async t => t.is(
+  await mergeAndConcatAsync('unicorns'),
+  'unicorns'));
+
+test('async :: empty input', t => t.throws(mergeAndConcatAsync(), TypeError));
+test('async :: invalid input', t => t.throws(mergeAndConcatAsync(2), TypeError));

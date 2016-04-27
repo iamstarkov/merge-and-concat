@@ -1,6 +1,15 @@
-import { isArray, merge, uniq } from 'lodash';
-const mergeArrays = (a, b) => { if (isArray(a)) { return uniq(a.concat(b)); }}
+function mergeAndConcatAsync(input) {
+  if (typeof input !== 'string') {
+    return Promise.reject(new TypeError(`\input\` should be \`String\`, got \`${typeof input}\``));
+  }
+  return Promise.resolve(input);
+}
 
-export default function mergeAndConcat(...objects) {
-  return merge(...objects, mergeArrays)
-};
+function mergeAndConcat(input) {
+  if (typeof input !== 'string') {
+    throw new TypeError(`\input\` should be \`String\`, got \`${typeof input}\``);
+  }
+  return input;
+}
+
+export { mergeAndConcat, mergeAndConcatAsync };

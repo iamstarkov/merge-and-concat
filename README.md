@@ -1,7 +1,8 @@
 # merge-and-concat
 
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
+[![Unix Build Status][travis-image]][travis-url]
+[![Windows Build Status][appveyor-image]][appveyor-url]
 [![Coveralls Status][coveralls-image]][coveralls-url]
 [![Dependency Status][depstat-image]][depstat-url]
 
@@ -14,25 +15,36 @@
 ## Usage
 
 ```js
-import mergeAndConcat from 'merge-and-concat';
+import { mergeAndConcat, mergeAndConcatAsync } from 'merge-and-concat';
 
-mergeAndConcat(
-  { hey: 'hey', list: [1, 2] },
-  { ho: 'ho', list: [3, 4] },
-  { uni: 'corns' }
-); // { hey: 'hey', ho: 'ho', uni: 'corns', list: [1, 2, 3, 4] }
+mergeAndConcat('unicorns'); // unicorns
+mergeAndConcatAsync('unicorns')
+  .then(result => console.log(result)); // unicorns
 ```
 
 ## API
 
-### mergeAndConcat(...objects)
+### mergeAndConcat(input, [options])
 
-#### objects
+### mergeAndConcatAsync(input, [options])
+
+Return a promise that resolves to `result`.
+
+#### input
 
 *Required*  
-Type: each item is `Object`
+Type: `String`
 
-Set of objects
+Lorem ipsum.
+
+#### options
+
+##### foo
+
+Type: `Boolean`  
+Default: `false`
+
+Lorem ipsum.
 
 ## License
 
@@ -42,7 +54,10 @@ MIT © [Vladimir Starkov](https://iamstarkov.com)
 [npm-image]: https://img.shields.io/npm/v/merge-and-concat.svg?style=flat-square
 
 [travis-url]: https://travis-ci.org/iamstarkov/merge-and-concat
-[travis-image]: https://img.shields.io/travis/iamstarkov/merge-and-concat.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/iamstarkov/merge-and-concat.svg?style=flat-square&label=unix
+
+[appveyor-url]: https://ci.appveyor.com/project/iamstarkov/merge-and-concat
+[appveyor-image]: https://img.shields.io/appveyor/ci/iamstarkov/merge-and-concat.svg?style=flat-square&label=windows
 
 [coveralls-url]: https://coveralls.io/r/iamstarkov/merge-and-concat
 [coveralls-image]: https://img.shields.io/coveralls/iamstarkov/merge-and-concat.svg?style=flat-square
