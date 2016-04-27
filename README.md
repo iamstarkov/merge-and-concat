@@ -15,36 +15,30 @@
 ## Usage
 
 ```js
-import { mergeAndConcat, mergeAndConcatAsync } from 'merge-and-concat';
+import mergeAndConcat from 'merge-and-concat';
 
-mergeAndConcat('unicorns'); // unicorns
-mergeAndConcatAsync('unicorns')
-  .then(result => console.log(result)); // unicorns
+mergeAndConcat(
+  { hey: 'hey', list: [1, 2] },
+  { ho: 'ho', list: [3, 4] },
+  { uni: 'corns' }
+); // { hey: 'hey', ho: 'ho', uni: 'corns', list: [1, 2, 3, 4] }
+
+mergeAndConcat(
+  { after_script: ['npm run coverage'] },
+  { after_script: ['npm run coverage'] }
+); // { after_script: ['npm run coverage'] }
 ```
 
 ## API
 
-### mergeAndConcat(input, [options])
+### mergeAndConcat(...objects)
 
-### mergeAndConcatAsync(input, [options])
-
-Return a promise that resolves to `result`.
-
-#### input
+#### objects
 
 *Required*  
-Type: `String`
+Type: each item is `Object`
 
-Lorem ipsum.
-
-#### options
-
-##### foo
-
-Type: `Boolean`  
-Default: `false`
-
-Lorem ipsum.
+Set of objects
 
 ## License
 
